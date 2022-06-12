@@ -14,7 +14,7 @@ Step 2: While loop on term not exceeding 4million
 Step 3: Add even term to a running Sum variable
 */
 
-function fibAddEven(maxTerm){
+function fibAddEven(maxTermValue){
     // Start with the first 2 terms being 1 and 2
     var evenSum = 2
     var newFib = 0
@@ -23,7 +23,7 @@ function fibAddEven(maxTerm){
 
     newFib = currFib + prevFib
     
-    while ( newFib <= maxTerm ) {
+    while ( newFib <= maxTermValue ) {
         if (newFib % 2 == 0){
             evenSum = evenSum + newFib
         }
@@ -32,7 +32,7 @@ function fibAddEven(maxTerm){
         currFib = newFib
         newFib = currFib + prevFib
     }
-console.log("Sum of Even Fibonacci Terms with max term value of " + maxTerm + " = " + evenSum)
+console.log("Sum of Even Fibonacci Terms with max term value of " + maxTermValue + " = " + evenSum)
 }
 
 fibAddEven(4000000)
